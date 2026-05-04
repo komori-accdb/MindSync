@@ -44,12 +44,5 @@ MindSync is a comprehensive mental well-being platform designed to help individu
 - **Real-time Feedback** – Implementing real-time feedback mechanisms.
 - **Community Features** – Building features to foster community support and interaction.
 
-## Team
-
-| **Name**             |  
-|----------------------|
-| Kosuri Lakshmi Indu  |  
-| Namratha Sriram      |  
-| Jahnvi Kakkar        |  
 
  
