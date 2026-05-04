@@ -16,7 +16,7 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 # Configure Gemini API Key
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+genai.configure(api_key=os.getenv("AIzaSyCNVUWjZwB0G8NgIkUuB2makXwmpPHvQs8"))
 
 @main.route("/fetch_journal_data/<user_id>", methods=["GET"])
 def fetch_journal_data(user_id):

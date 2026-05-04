@@ -60,7 +60,7 @@ class _VoiceChatPageState extends State<VoiceChatPage> {
 
   Future<void> _initializeGemini() async {
     await dotenv.load(fileName: "assets/.env");
-    String apiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
+    String apiKey = 'AIzaSyCNVUWjZwB0G8NgIkUuB2makXwmpPHvQs8';
     print("API Key: $apiKey"); 
 
     if (apiKey.isEmpty) {
@@ -68,7 +68,7 @@ class _VoiceChatPageState extends State<VoiceChatPage> {
     }
 
     _model = GenerativeModel(
-      model: 'gemini-1.5-flash',
+      model: 'gemini-flash-latest',
       apiKey: apiKey,
       safetySettings: [
         SafetySetting(HarmCategory.hateSpeech, HarmBlockThreshold.medium),

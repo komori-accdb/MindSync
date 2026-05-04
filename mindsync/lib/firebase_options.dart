@@ -3,7 +3,6 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -23,6 +22,12 @@ class DefaultFirebaseOptions {
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
+      case TargetPlatform.iOS:
+        return ios;
+      case TargetPlatform.macOS:
+        return macos;
+      case TargetPlatform.windows:
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -35,49 +40,49 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static FirebaseOptions web = FirebaseOptions(
-    apiKey: dotenv.env['FIREBASE_API_KEY_WEB']!,
-    appId: dotenv.env['FIREBASE_WEB_APP_ID']!,
-    messagingSenderId: '120450956131',
-    projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
-    authDomain: 'mindsync-3e85c.firebaseapp.com',
-    storageBucket: 'mindsync-3e85c.firebasestorage.app',
-    measurementId: 'G-F0XT3NBM7Z',
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyD2ahRKfKdZSY6yy3xUr5wPgZaR2DBinXk',
+    appId: '1:1095113480611:web:85b01ee87670c7ede3e216',
+    messagingSenderId: '1095113480611',
+    projectId: 'mind-sync-4pp',
+    authDomain: 'mind-sync-4pp.firebaseapp.com',
+    storageBucket: 'mind-sync-4pp.firebasestorage.app',
+    measurementId: 'G-5G64W9BSS8',
   );
 
-  static FirebaseOptions android = FirebaseOptions(
-    apiKey: dotenv.env['FIREBASE_API_KEY_ANDROID']!,
-    appId: dotenv.env['FIREBASE_ANDROID_APP_ID']!,
-    messagingSenderId: '120450956131',
-    projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
-    storageBucket: 'mindsync-3e85c.firebasestorage.app',
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyAHxY9swoj_34PycU3gD-vM5QSp-cBlZpc',
+    appId: '1:1095113480611:android:2494c97c1ffe2e92e3e216',
+    messagingSenderId: '1095113480611',
+    projectId: 'mind-sync-4pp',
+    storageBucket: 'mind-sync-4pp.firebasestorage.app',
   );
 
-  static FirebaseOptions ios = FirebaseOptions(
-    apiKey: dotenv.env['FIREBASE_API_KEY_IOS']!,
-    appId: dotenv.env['FIREBASE_IOS_APP_ID']!,
-    messagingSenderId: '120450956131',
-    projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
-    storageBucket: 'mindsync-3e85c.firebasestorage.app',
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyCZjjMUvlTVisBTEf6RI-hc0NQQ12neZNY',
+    appId: '1:1095113480611:ios:199152a8e3930819e3e216',
+    messagingSenderId: '1095113480611',
+    projectId: 'mind-sync-4pp',
+    storageBucket: 'mind-sync-4pp.firebasestorage.app',
     iosBundleId: 'com.example.mindsync',
   );
 
-  static FirebaseOptions macos = FirebaseOptions(
-    apiKey: dotenv.env['FIREBASE_API_KEY_MACOS']!,
-    appId: dotenv.env['FIREBASE_MACOS_APP_ID']!,
-    messagingSenderId: '120450956131',
-    projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
-    storageBucket: 'mindsync-3e85c.firebasestorage.app',
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyCZjjMUvlTVisBTEf6RI-hc0NQQ12neZNY',
+    appId: '1:1095113480611:ios:199152a8e3930819e3e216',
+    messagingSenderId: '1095113480611',
+    projectId: 'mind-sync-4pp',
+    storageBucket: 'mind-sync-4pp.firebasestorage.app',
     iosBundleId: 'com.example.mindsync',
   );
 
-  static FirebaseOptions windows = FirebaseOptions(
-    apiKey: dotenv.env['FIREBASE_API_KEY_WINDOWS']!,
-    appId: dotenv.env['FIREBASE_WINDOWS_APP_ID']!,
-    messagingSenderId: '120450956131',
-    projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
-    authDomain: 'mindsync-3e85c.firebaseapp.com',
-    storageBucket: 'mindsync-3e85c.firebasestorage.app',
-    measurementId: 'G-1R402Z424M',
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyD2ahRKfKdZSY6yy3xUr5wPgZaR2DBinXk',
+    appId: '1:1095113480611:web:14050de0d8a618efe3e216',
+    messagingSenderId: '1095113480611',
+    projectId: 'mind-sync-4pp',
+    authDomain: 'mind-sync-4pp.firebaseapp.com',
+    storageBucket: 'mind-sync-4pp.firebasestorage.app',
+    measurementId: 'G-T5ZFCP3YBN',
   );
 }

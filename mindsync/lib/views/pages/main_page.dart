@@ -34,54 +34,53 @@ class _MainScreenState extends State<MainPage> {
         index: _selectedIndex,
         children: _pages,
       ),
-      bottomNavigationBar: Container(
-        height: 70, 
-        child: BottomNavigationBar(
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(
-                _selectedIndex == 0 ? Icons.home : Icons.home_outlined,
-              ),
-              label: 'Home',
+      // Look here! No Container, no SafeArea. Just the raw BottomNavigationBar.
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              _selectedIndex == 0 ? Icons.home : Icons.home_outlined,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                _selectedIndex == 1 ? Icons.explore : Icons.explore_outlined,
-              ),
-              label: 'Explore',
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              _selectedIndex == 1 ? Icons.explore : Icons.explore_outlined,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                _selectedIndex == 2
-                    ? Icons.book
-                    : Icons.book_outlined,
-              ),
-              label: 'Journal', 
+            label: 'Explore',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              _selectedIndex == 2
+                  ? Icons.book
+                  : Icons.book_outlined,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                _selectedIndex == 3 ? Icons.insights : Icons.insights_outlined,
-              ),
-              label: 'Insights',
+            label: 'Journal',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              _selectedIndex == 3 ? Icons.insights : Icons.insights_outlined,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                _selectedIndex == 4
-                    ? Icons.account_circle
-                    : Icons.account_circle_outlined,
-              ),
-              label: 'Account',
+            label: 'Insights',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              _selectedIndex == 4
+                  ? Icons.account_circle
+                  : Icons.account_circle_outlined,
             ),
-          ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Color(0xFF9EB567),
-          unselectedItemColor: Colors.grey,
-          backgroundColor: Colors.white,
-          onTap: _onItemTapped,
-          type: BottomNavigationBarType.fixed,
-          iconSize: 25,
-        ),
+            label: 'Account',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Color(0xFF9EB567),
+        unselectedItemColor: Colors.grey,
+        backgroundColor: Colors.white,
+        onTap: _onItemTapped,
+        type: BottomNavigationBarType.fixed,
+        iconSize: 25,
       ),
     );
   }
 }
+

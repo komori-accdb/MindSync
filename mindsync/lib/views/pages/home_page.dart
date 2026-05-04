@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Expanded(
                       child: ActionButton(
-                        text: 'Chat with Snehi',
+                        text: 'Chat with Mindy',
                         icon: Icons.chat,
                         backgroundColor: Colors.white,
                         height: 60,
@@ -145,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Expanded(
                       child: ActionButton(
-                        text: 'Talk with Snehi',
+                        text: 'Talk with Mindy',
                         icon: Icons.mic,
                         backgroundColor: Colors.white,
                         height: 60,

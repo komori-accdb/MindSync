@@ -28,7 +28,7 @@ class _GrowthAreaState extends State<GrowthArea> {
 
   Future<void> _initializeGemini() async {
     await dotenv.load(fileName: "assets/.env");
-    String apiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
+    String apiKey = 'AIzaSyCNVUWjZwB0G8NgIkUuB2makXwmpPHvQs8';
 
     if (apiKey.isEmpty) {
       print("⚠️ ERROR: API Key is missing!");
@@ -36,7 +36,7 @@ class _GrowthAreaState extends State<GrowthArea> {
     }
 
     _model = GenerativeModel(
-      model: 'gemini-1.5-flash',
+      model: 'gemini-flash-latest',
       apiKey: apiKey,
     );
 

@@ -36,13 +36,13 @@ class _ThoughtSortingGameState extends State<ThoughtSortingGame> {
 
   Future<void> _initializeGemini() async {
     await dotenv.load(fileName: "assets/.env");
-    String apiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
+    String apiKey = 'AIzaSyCNVUWjZwB0G8NgIkUuB2makXwmpPHvQs8';
     if (apiKey.isEmpty) {
       throw Exception("API Key is missing!");
     }
 
     _model = GenerativeModel(
-      model: 'gemini-1.5-flash',
+      model: 'gemini-flash-latest',
       apiKey: apiKey,
     );
     _chatSession = _model.startChat(history: [

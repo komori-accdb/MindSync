@@ -26,14 +26,14 @@ class _QuotesPageState extends State<QuotesPage> {
 
   Future<void> _initializeGemini() async {
     await dotenv.load(fileName: "assets/.env");
-    String apiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
+    String apiKey = 'AIzaSyCNVUWjZwB0G8NgIkUuB2makXwmpPHvQs8';
 
     if (apiKey.isEmpty) {
       throw Exception("API Key is missing!");
     }
 
     _model = GenerativeModel(
-      model: 'gemini-1.5-flash',
+      model: 'gemini-flash-latest',
       apiKey: apiKey,
       safetySettings: [
         SafetySetting(HarmCategory.hateSpeech, HarmBlockThreshold.medium),
